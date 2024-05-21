@@ -192,10 +192,6 @@ task packageJavadoc(type: Jar) {
     classifier = 'javadoc'
 }
 
-task packageGroovydoc(type: Jar) {
-    from groovydoc
-    classifier = 'groovydoc'
-}
 
 publishing {
 
@@ -204,7 +200,6 @@ publishing {
             from components.java
             artifact sourceJar
             artifact packageJavadoc
-            artifact packageGroovydoc
         }
     }
 
